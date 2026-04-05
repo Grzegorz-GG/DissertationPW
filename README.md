@@ -81,6 +81,24 @@ pH: Model MSE = 0.0622, Baseline MSE = 0.0676, Normalized = 0.9201 <br>
     </li>
 </ul>
 
+
+<h3>Experiment5 (not saved):</h3>
+<p> Notes: Warm-up phase added</p>
+<p>
+</p>
+<ul>
+    <li>PCA with 3 components</li>
+    <li>maks. 2M pixels in pca matrix</li>
+    <li>efficientnet_b0, pretrained = False</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.Resize((224, 224)),</li>
+            <li>v2.RandomHorizontalFlip(p=0.5),</li>
+            <li>v2.GaussianNoise(mean=0.0, sigma=0.03)</li>
+        </ul>
+    </li>
+</ul>
+
 <h3>Experiment 6(norm. score wrt baseline: 0.9902):</h3>
 <p> Notes: 4M pixels with rand pca (better GPU used) + warm-up phase. Performance did not improve.</p>
 <p>
