@@ -183,5 +183,48 @@ pH: Model MSE = 0.0676, Baseline MSE = 0.0724, Normalized = 0.9333 <br>
         </ul>
     </li>
 </ul>
+
+<h3>Experiment 10(norm. score wrt baseline: 1.0406:</h3>
+<p> Notes: 10M pixels with rand pca (better GPU used) + warm-up phase.</p>
+<p>
+P: Model MSE = 869.2822, Baseline MSE = 833.2123, Normalized = 1.0433 <br>
+K: Model MSE = 4125.5552, Baseline MSE = 4031.7278, Normalized = 1.0233 <br>
+Mg: Model MSE = 1589.5768, Baseline MSE = 1499.2853, Normalized = 1.0602 <br>
+pH: Model MSE = 0.0750, Baseline MSE = 0.0724, Normalized = 1.0358 <br>
+</p>
+<ul>
+    <li>PCA with 15 components</li>
+    <li>maks. 10M pixels in pca matrix</li>
+    <li>efficientnet_b0, pretrained = False</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.Resize((224, 224)),</li>
+            <li>v2.RandomHorizontalFlip(p=0.5),</li>
+            <li>v2.GaussianNoise(mean=0.0, sigma=0.03)</li>
+        </ul>
+    </li>
+</ul>
+
+
+<h3>Experiment 11(norm. score wrt baseline: 1.0495:</h3>
+<p> Notes: 10M pixels with rand pca (better GPU used) + warm-up phase.</p>
+<p>
+P: Model MSE = 895.3030, Baseline MSE = 833.2123, Normalized = 1.0745 <br>
+K: Model MSE = 4197.0293, Baseline MSE = 4031.7278, Normalized = 1.0410 <br>
+Mg: Model MSE = 1579.4727, Baseline MSE = 1499.2853, Normalized = 1.0535 <br>
+pH: Model MSE = 0.0745, Baseline MSE = 0.0724, Normalized = 1.0292 <br>
+</p>
+<ul>
+    <li>PCA with 25 components</li>
+    <li>maks. 10M pixels in pca matrix</li>
+    <li>efficientnet_b0, pretrained = False</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.Resize((224, 224)),</li>
+            <li>v2.RandomHorizontalFlip(p=0.5),</li>
+            <li>v2.GaussianNoise(mean=0.0, sigma=0.03)</li>
+        </ul>
+    </li>
+</ul>
   
   
