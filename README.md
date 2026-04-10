@@ -162,5 +162,26 @@ pH: Model MSE = 0.0675, Baseline MSE = 0.0724, Normalized = 0.9328 <br>
         </ul>
     </li>
 </ul>
+
+<h3>Experiment 9(Val Loss: 0.9092,norm. score wrt baseline: 0.9953):</h3>
+<p> Notes: 10M pixels with rand pca (better GPU used) + warm-up phase.</p>
+<p>
+P: Model MSE = 838.8846, Baseline MSE = 833.2123, Normalized = 1.0068 <br>
+K: Model MSE = 4089.4575, Baseline MSE = 4031.7278, Normalized = 1.0143 <br>
+Mg: Model MSE = 1539.5592, Baseline MSE = 1499.2853, Normalized = 1.0269 <br>
+pH: Model MSE = 0.0676, Baseline MSE = 0.0724, Normalized = 0.9333 <br>
+</p>
+<ul>
+    <li>PCA with 10 components</li>
+    <li>maks. 10M pixels in pca matrix</li>
+    <li>efficientnet_b0, pretrained = False</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.Resize((224, 224)),</li>
+            <li>v2.RandomHorizontalFlip(p=0.5),</li>
+            <li>v2.GaussianNoise(mean=0.0, sigma=0.03)</li>
+        </ul>
+    </li>
+</ul>
   
   
