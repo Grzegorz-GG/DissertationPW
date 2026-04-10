@@ -121,7 +121,7 @@ pH: Model MSE = 0.0623, Baseline MSE = 0.0676, Normalized = 0.9221 <br>
 </ul>
 
 
-<h3>Experiment 7(norm. score wrt baseline: 0.9803):</h3>
+<h3>Experiment 7(val loss:0.8706 ,norm. score wrt baseline: 0.9803):</h3>
 <p> Notes: 8M pixels with rand pca (better GPU used) + warm-up phase.</p>
 <p>
 P: Model MSE = 825.3816, Baseline MSE = 833.2123, Normalized = 0.9906 <br>
