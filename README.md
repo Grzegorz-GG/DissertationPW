@@ -407,6 +407,23 @@ Completely wrong predicted values.
     </li>
 </ul>
 
+<h3>Experiment 21(very high gradient values):</h3>
+<p> Notes: 1x1 conv with 3 filters, adding padding instead of resize, different norm method taking into account mask</p>
+<p>
+Completely wrong predicted values.
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>different hyperparameters (smaller lr)</li>
+    <li>efficientnet_b0, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.RandomHorizontalFlip(p=0.5),</li>
+            <li>v2.GaussianNoise(mean=0.0, sigma=0.03)</li>
+        </ul>
+    </li>
+</ul>
+
   
   
   
