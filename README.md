@@ -373,6 +373,23 @@ pH: Model MSE = 0.0745, Baseline MSE = 0.0724, Normalized = 1.0292 <br>
         </ul>
     </li>
 </ul>
+
+<h3>Experiment 19 (gradient exploded -> nan):</h3>
+<p> Notes: 1x1 conv with 10 filters, adding padding instead of resize</p>
+<p>
+Completely wrong predicted values (even < 0)
+</p>
+<ul>
+    <li>1x1 conv with 10 filters</li>
+    <li>efficientnet_b0, pretrained = False</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.RandomHorizontalFlip(p=0.5),</li>
+            <li>v2.GaussianNoise(mean=0.0, sigma=0.03)</li>
+        </ul>
+    </li>
+</ul>
+  
   
   
   
