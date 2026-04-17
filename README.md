@@ -424,6 +424,26 @@ Completely wrong predicted values.
     </li>
 </ul>
 
+<h3>Experiment 22(very high gradient values):</h3>
+<p> Notes: 1x1 conv with 3 filters, adding padding instead of resize, global normalization (!), training interrupted prematurely</p>
+<p>
+P: Model MSE = 969.3774, Baseline MSE = 956.1005, Normalized = 1.0139<br>
+K: Model MSE = 3404.8650, Baseline MSE = 3448.3214, Normalized = 0.9874 <br>
+Mg: Model MSE = 1470.4374, Baseline MSE = 1448.3911, Normalized = 1.0152<br>
+pH: Model MSE = 0.0661, Baseline MSE = 0.0677, Normalized = 0.9765<br>
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>different hyperparameters (smaller lr)</li>
+    <li>efficientnet_b0, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.RandomHorizontalFlip(p=0.5),</li>
+            <li>v2.GaussianNoise(mean=0.0, sigma=0.03)</li>
+        </ul>
+    </li>
+</ul>
+
   
   
   
