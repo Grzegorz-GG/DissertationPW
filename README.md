@@ -465,6 +465,26 @@ pH: Model MSE = 0.0671, Baseline MSE = 0.0677, Normalized = 0.9917<br>
     </li>
 </ul>
 
+<h3>Experiment 24:</h3>
+<p> Notes: 1x1 conv with 10 filters, adding padding instead of resize, global normalization (!), changed hyperparameters,reasonable values of val loss and training loss</p>
+<p>
+P: Model MSE = 990.8983, Baseline MSE = 956.1005, Normalized = 1.0364<br>
+K: Model MSE = 5301.6675, Baseline MSE = 3448.3214, Normalized = 1.5375<br>
+Mg: Model MSE = 1577.3319, Baseline MSE = 1448.3911, Normalized = 1.0890<br>
+pH: Model MSE = 0.0746, Baseline MSE = 0.0677, Normalized = 1.1031<br>
+</p>
+<ul>
+    <li>1x1 conv with 15 filters</li>
+    <li>different hyperparameters (smaller lr)</li>
+    <li>efficientnet_b0, pretrained = False</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.RandomHorizontalFlip(p=0.5),</li>
+            <li>v2.GaussianNoise(mean=0.0, sigma=0.03)</li>
+        </ul>
+    </li>
+</ul>
+
 
   
   
