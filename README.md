@@ -485,6 +485,27 @@ pH: Model MSE = 0.0746, Baseline MSE = 0.0677, Normalized = 1.1031<br>
     </li>
 </ul>
 
+<h3>Experiment 25:</h3>
+<p> Notes: Best val loss and training loss learning curves so far (decreasing), 1x1 conv with 3 filters, adding padding instead of resize, global normalization (!), changed hyperparameters,reasonable values of val loss and training loss</p>
+<p>
+P: Model MSE = 965.4764, Baseline MSE = 956.1005, Normalized = 1.0098<br>
+K: Model MSE = 3227.5916, Baseline MSE = 3448.3214, Normalized = 0.9360<br>
+Mg: Model MSE = 1480.8820, Baseline MSE = 1448.3911, Normalized = 1.0224<br>
+pH: Model MSE = 0.0630, Baseline MSE = 0.0677, Normalized = 0.9312<br>
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>different hyperparameters (smaller lr)</li>
+    <li>convnext_base_in22k, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.RandomHorizontalFlip(p=0.5),</li>
+            <li>v2.GaussianNoise(mean=0.0, sigma=0.03)</li>
+        </ul>
+    </li>
+</ul>
+
+
 
   
   
