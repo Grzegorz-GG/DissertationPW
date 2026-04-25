@@ -545,6 +545,26 @@ Overall: 0.9 <br>
     </li>
 </ul>
 
+<h3>Experiment 28:</h3>
+<p> Notes: Best val loss and training loss learning curves so far (decreasing), 1x1 conv with 3 filters, adding padding instead of resize, global normalization (!), changed hyperparameters,reasonable values of val loss and training loss</p>
+<p>
+P: Model MSE = 910.9445, Baseline MSE = 956.1005, Normalized = 0.9528 <br>
+K: Model MSE = 2665.4558, Baseline MSE = 3448.3214, Normalized = 0.7730 <br>
+Mg: Model MSE = 1275.5963, Baseline MSE = 1448.3911, Normalized = 0.8807 <br>
+pH: Model MSE = 0.0590, Baseline MSE = 0.0677, Normalized = 0.8718 <br>
+Overall: 0.87 <br>
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>different hyperparameters (changed lr for head -> ~10^-4, backbone ~10^-5, reducer ~10^-4, weight decay ~10^-3, batch 64)</li>
+    <li>convnext_tiny_in22k, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li>no augmentation </li>
+        </ul>
+    </li>
+</ul>
+
   
   
   
