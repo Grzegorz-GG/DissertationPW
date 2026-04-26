@@ -586,6 +586,29 @@ Overall: 0.9696 <br>
     </li>
 </ul>
 
+<h3>Experiment 30:</h3>
+<p> Notes: Larger regression head, additional augmentation added</p>
+<p>
+P: Model MSE = 914.7599, Baseline MSE = 956.1005, Normalized = 0.9568 <br>
+K: Model MSE = 2625.4749, Baseline MSE = 3448.3214, Normalized = 0.7614 <br>
+Mg: Model MSE = 1259.4757, Baseline MSE = 1448.3911, Normalized = 0.8696 <br>
+pH: Model MSE = 0.0604, Baseline MSE = 0.0677, Normalized = 0.8922 <br>
+Overall: 0.87 <br>
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>different hyperparameters (changed lr for head -> ~10^-4, backbone ~10^-5, reducer ~10^-4, weight decay ~10^-3, batch 64)</li>
+    <li>convnext_tiny_in22k, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>RandomRot90()</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
+
   
   
   
