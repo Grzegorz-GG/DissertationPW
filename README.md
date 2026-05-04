@@ -632,6 +632,29 @@ Overall: 0.8598 <br>
     </li>
 </ul>
 
+<h3>Experiment 33:</h3>
+<p> Notes: size added to features, additional augmentation added</p>
+<p>
+P: Model MSE = 903.1269, Baseline MSE = 956.1005, Normalized = 0.9446 <br>
+K: Model MSE = 2405.4585, Baseline MSE = 3448.3214, Normalized = 0.6976 <br>
+Mg: Model MSE = 1219.8105, Baseline MSE = 1448.3911, Normalized = 0.8422 <br>
+pH: Model MSE = 0.0646, Baseline MSE = 0.0677, Normalized = 0.9554 <br>
+Overall: 0.0.8599 <br>
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>changed lr for head -> ~10^-4, backbone ~10^-5, reducer ~10^-4, weight decay ~10^-4, batch 32</li>
+    <li>maxvit_tiny_tf_224, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>RandomRot90()</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
+
   
   
   
