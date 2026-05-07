@@ -703,6 +703,29 @@ Overall: 0.8893 <br>
     </li>
 </ul>
 
+<h3>Experiment 38:</h3>
+<p> Notes: convnext_base_in22k backbone</p>
+<p>
+P: Model MSE = 929.9580, Baseline MSE = 956.1005, Normalized = 0.9727<br>
+K: Model MSE = 2785.2366, Baseline MSE = 3448.3214, Normalized = 0.8077<br>
+Mg: Model MSE = 1323.1812, Baseline MSE = 1448.3911, Normalized = 0.9136<br>
+pH: Model MSE = 0.0590, Baseline MSE = 0.0677, Normalized = 0.8714<br>
+Overall: 0.8913 <br>
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>changed lr for head -> ~10^-4, backbone ~10^-5, reducer ~10^-4, weight decay ~10^-4, batch 32</li>
+    <li>convnext_base_in22k backbone, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>RandomRot90()</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
+
 
   
   
