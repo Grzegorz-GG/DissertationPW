@@ -658,10 +658,10 @@ Overall: 0.0.8599 <br>
 <h3>Experiment 34:</h3>
 <p> Notes: size added to features, additional augmentation added</p>
 <p>
-P: Model MSE = 922.9059, Baseline MSE = 956.1005, Normalized = 0.9653
-K: Model MSE = 2898.6074, Baseline MSE = 3448.3214, Normalized = 0.8406
-Mg: Model MSE = 1238.4281, Baseline MSE = 1448.3911, Normalized = 0.8550
-pH: Model MSE = 0.0636, Baseline MSE = 0.0677, Normalized = 0.9393
+P: Model MSE = 922.9059, Baseline MSE = 956.1005, Normalized = 0.9653<br>
+K: Model MSE = 2898.6074, Baseline MSE = 3448.3214, Normalized = 0.8406<br>
+Mg: Model MSE = 1238.4281, Baseline MSE = 1448.3911, Normalized = 0.8550<br>
+pH: Model MSE = 0.0636, Baseline MSE = 0.0677, Normalized = 0.9393<br>
 Overall: 0.9001 <br>
 </p>
 <ul>
@@ -676,6 +676,29 @@ Overall: 0.9001 <br>
             <li>RandomSpectralDrop(drop_prob=0.05)</li>
             <li>RandomSpectralDrop(drop_prob=0.05)</li>
             <li>v2.RandomApply([v2.GaussianNoise(mean=0., sigma=0.01)], p=0.2)</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Experiment 37:</h3>
+<p> Notes: size added to features, additional augmentation added</p>
+<p>
+P: Model MSE = 937.5502, Baseline MSE = 956.1005, Normalized = 0.9806<br>
+K: Model MSE = 2504.2683, Baseline MSE = 3448.3214, Normalized = 0.7262<br>
+Mg: Model MSE = 1293.0944, Baseline MSE = 1448.3911, Normalized = 0.8928<br>
+pH: Model MSE = 0.0648, Baseline MSE = 0.0677, Normalized = 0.95773<br>
+Overall: 0.8893 <br>
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>changed lr for head -> ~10^-3, backbone ~10^-5, reducer ~10^-3, weight decay ~10^-4, batch 32</li>
+    <li>maxvit_tiny_tf_224, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>RandomRot90()</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
         </ul>
     </li>
 </ul>
