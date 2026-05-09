@@ -720,7 +720,30 @@ Overall: 0.8913 <br>
         <ul>
             <li>v2.RandomHorizontalFlip(p=0.5)</li>
             <li>v2.RandomVerticalFlip(p=0.5)</li>
-            <li>RandomRot90()</li>
+            <li>RandomRotAngle()</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Experiment 38b:</h3>
+<p> Notes: convnext_base_in22k backbone, no random rotation</p>
+<p>
+P: Model MSE = 886.9243, Baseline MSE = 956.1005, Normalized = 0.9276<br>
+K: Model MSE = 2411.2856, Baseline MSE = 3448.3214, Normalized = 0.6993<br>
+Mg: Model MSE = 1232.7368, Baseline MSE = 1448.3911, Normalized = 0.8511<br>
+pH: Model MSE = 0.0623, Baseline MSE = 0.0677, Normalized = 0.9203<br>
+
+Challenge normalized score (lower is better, on local test set): 0.8496<br>
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>changed lr for head -> ~10^-4, backbone ~10^-5, reducer ~10^-4, weight decay ~10^-4, batch 32</li>
+    <li>convnext_base_in22k backbone, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
             <li>RandomSpectralDrop(drop_prob=0.05)</li>
         </ul>
     </li>
