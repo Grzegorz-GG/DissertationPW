@@ -773,7 +773,7 @@ Challenge normalized score (lower is better, on local test set): 0.8342<br>
     </li>
 </ul>
 
-<h3>Experiment 39:</h3>
+<h3>Experiment 39a:</h3>
 <p> Notes: convnext_small_in22k backbone, randomrot by 90 deg added in comparison to 38b</p>
 <p>
 P: Model MSE = 910.7117, Baseline MSE = 956.1005, Normalized = 0.9525<br>
@@ -798,6 +798,32 @@ Challenge normalized score (lower is better, on local test set): 0.86892<br>
                 v2.RandomRotation(degrees=(180, 180)),
                 v2.RandomRotation(degrees=(270, 270)),
             ])</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
+
+
+<h3>Experiment 39b:</h3>
+<p> Notes: convnext_small_in22k backbone, custom randomrot by 90 deg added</p>
+<p>
+P: Model MSE = 895.0475, Baseline MSE = 956.1005, Normalized = 0.9361<br>
+K: Model MSE = 2592.5896, Baseline MSE = 3448.3214, Normalized = 0.7518<br>
+Mg: Model MSE = 1208.7039, Baseline MSE = 1448.3911, Normalized = 0.8345<br>
+pH: Model MSE = 0.0591, Baseline MSE = 0.0677, Normalized = 0.8739<br>
+
+Challenge normalized score (lower is better, on local test set): 0.8491<br>
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>changed lr for head -> ~10^-4, backbone ~10^-5, reducer ~10^-4, weight decay ~10^-4, batch 32</li>
+    <li>convnext_small_in22k backbone, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li> v2.RandomResizedCrop(size=self.size, scale=(0.8, 1.0))</li>li>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>custom random rotation by 90 deg.</li>
             <li>RandomSpectralDrop(drop_prob=0.05)</li>
         </ul>
     </li>
