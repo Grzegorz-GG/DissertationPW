@@ -794,6 +794,27 @@ Challenge normalized score (lower is better, on entire test dataset): 0.81479<br
     </li>
 </ul>
 
+<h3>Experiment 38e:</h3>
+<p> Notes: convnext_base_in22k backbone, removed custom rand rotation by 90 deg, trained on entire training dataset\val dataset</p>
+<p>
+
+Challenge normalized score (lower is better, on entire test dataset): <br>
+</p>
+<ul>
+    <li>1x1 conv with 3 filters</li>
+    <li>changed lr for head -> ~10^-4, backbone ~10^-5, reducer ~10^-4, weight decay ~10^-4, batch 32</li>
+    <li>convnext_base_in22k backbone, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li> v2.RandomResizedCrop(size=self.size, scale=(0.8, 1.0))</li>li>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
+
+
 <h3>Experiment 39a:</h3>
 <p> Notes: convnext_small_in22k backbone, randomrot by 90 deg added in comparison to 38b</p>
 <p>
