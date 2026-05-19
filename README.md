@@ -1022,7 +1022,7 @@ Challenge normalized score (lower is better, test dataset): 0.7931<br>
 </ul>
 
 
-<h3>Experiment 45:</h3>
+<h3>Experiment 45a:</h3>
 <p> Notes: efficientnet_b0,PCA = 3</p>
 
 P: Model MSE = 918.6541, Baseline MSE = 956.1005, Normalized = 0.9608<br>
@@ -1036,6 +1036,32 @@ Challenge normalized score (lower is better, on local test set): 0.9096<br>
 <ul>
     <li>PCA = 3</li>
     <li>changed lr for head -> ~10^-4, backbone ~10^-5, weight decay ~10^-4, batch 32</li>
+    <li>efficientnet_b0, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li> v2.RandomResizedCrop(size=self.size, scale=(0.8, 1.0))</li>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>custom random rotation by 90 deg</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Experiment 45b:</h3>
+<p> Notes: efficientnet_b0,PCA = 3, different lr in comparison to 45a</p>
+
+P: Model MSE = 936.8811, Baseline MSE = 956.1005, Normalized = 0.9799<br>
+K: Model MSE = 3173.8735, Baseline MSE = 3448.3214, Normalized = 0.9204<br>
+Mg: Model MSE = 1340.3109, Baseline MSE = 1448.3911, Normalized = 0.9254<br>
+pH: Model MSE = 0.0588, Baseline MSE = 0.0677, Normalized = 0.8685<br>
+
+Challenge normalized score (lower is better, on local test set): 0.9235<br>
+
+</p>
+<ul>
+    <li>PCA = 3</li>
+    <li>changed lr for head -> ~10^-6, backbone ~10^-6, weight decay ~10^-4, batch 32</li>
     <li>efficientnet_b0, pretrained = True</li>
     <li>augmentations for training:
         <ul>
