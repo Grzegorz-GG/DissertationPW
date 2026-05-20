@@ -1177,5 +1177,31 @@ Challenge normalized score (lower is better, on local test set): 0.8720<br>
         </ul>
     </li>
 </ul>
+
+<h3>Experiment 46a:</h3>
+<p> Notes: coatnet_3_rw_224.sw_in12k,PCA = 3</p>
+
+P: Model MSE = 890.6203, Baseline MSE = 956.1005, Normalized = 0.9315<br>
+K: Model MSE = 2475.1248, Baseline MSE = 3448.3214, Normalized = 0.7178<br>
+Mg: Model MSE = 1177.7917, Baseline MSE = 1448.3911, Normalized = 0.8132<br>
+pH: Model MSE = 0.0607, Baseline MSE = 0.0677, Normalized = 0.8969<br>
+
+Challenge normalized score (lower is better, on local test set): 0.8398<br>
+
+</p>
+<ul>
+    <li>PCA = 3</li>
+    <li>changed lr for head -> ~10^-5, backbone ~10^-4, weight decay ~10^-4, batch 32</li>
+    <li>tf_efficientnetv2_l.in21k, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li> v2.RandomResizedCrop(size=self.size, scale=(0.8, 1.0))</li>li>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>custom random rotation by 90 deg</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
   
   
