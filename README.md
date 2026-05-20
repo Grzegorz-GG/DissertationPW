@@ -1229,5 +1229,26 @@ Challenge normalized score (lower is better, on local test set): 0.8349<br>
         </ul>
     </li>
 </ul>
+
+<h3>Experiment 46c:</h3>
+<p> Notes: coatnet_2_rw_224.sw_in12k,PCA = 3</p>
+
+Challenge normalized score (lower is better, trained on entire dataset  - val dataset): 0.8046<br>
+
+</p>
+<ul>
+    <li>PCA = 3</li>
+    <li>changed lr for head -> ~10^-5, backbone ~10^-4, weight decay ~10^-4, batch 32</li>
+    <li>coatnet_2_rw_224.sw_in12k, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li> v2.RandomResizedCrop(size=self.size, scale=(0.8, 1.0))</li>li>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>custom random rotation by 90 deg</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
   
   
