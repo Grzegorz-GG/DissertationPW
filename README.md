@@ -1263,7 +1263,31 @@ Challenge score (lower is better): 0.9149<br>
 
 </p>
 <ul>
-    <li>PCA = 3</li>
+    <li>changed lr for head -> ~10^4, backbone ~10^-5, weight decay ~10^-4, batch 16</li>
+    <li>DOFA, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li> v2.RandomResizedCrop(size=self.size, scale=(0.8, 1.0))</li>li>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>custom random rotation by 90 deg</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Experiment 47b:</h3>
+<p> Notes: DOFA, 150 bands, two stages: freezed backbone -> unfreezed backbone</p>
+
+  P: Model=956.6989  Baseline=956.1005  Norm=1.0006<br>
+  K: Model=3255.8706  Baseline=3448.3214  Norm=0.9442<br>
+  Mg: Model=1336.6593  Baseline=1448.3911  Norm=0.9229<br>
+  pH: Model=0.0586  Baseline=0.0677  Norm=0.8653<br>
+
+Challenge score (lower is better): 0.9333<br>
+
+</p>
+<ul>
     <li>changed lr for head -> ~10^4, backbone ~10^-5, weight decay ~10^-4, batch 16</li>
     <li>DOFA, pretrained = True</li>
     <li>augmentations for training:
