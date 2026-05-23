@@ -1250,5 +1250,30 @@ Challenge normalized score (lower is better, trained on entire dataset  - val da
         </ul>
     </li>
 </ul>
-  
+
+<h3>Experiment 47a:</h3>
+<p> Notes: DOFA, 150 bands</p>
+
+  P: Model=950.5294  Baseline=956.1005  Norm=0.9942<br>
+  K: Model=2980.6479  Baseline=3448.3214  Norm=0.8644<br>
+  Mg: Model=1272.3320  Baseline=1448.3911  Norm=0.8784<br>
+  pH: Model=0.0624  Baseline=0.0677  Norm=0.9225<br>
+
+Challenge score (lower is better): 0.9149<br>
+
+</p>
+<ul>
+    <li>PCA = 3</li>
+    <li>changed lr for head -> ~10^4, backbone ~10^-5, weight decay ~10^-4, batch 16</li>
+    <li>DOFA, pretrained = True</li>
+    <li>augmentations for training:
+        <ul>
+            <li> v2.RandomResizedCrop(size=self.size, scale=(0.8, 1.0))</li>li>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>custom random rotation by 90 deg</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
   
