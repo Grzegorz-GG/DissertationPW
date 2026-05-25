@@ -1325,5 +1325,29 @@ Challenge normalized score (lower is better, on local test set): 0.8675<br>
             <li>RandomSpectralDrop(drop_prob=0.05)</li>
         </ul>
     </li>
+
+<h3>Experiment 48c:</h3>
+<p> 1x1 conv, ConvNext large, no rotation</p>
+
+P: Model MSE = 879.3602, Baseline MSE = 956.1005, Normalized = 0.9197<br>
+K: Model MSE = 2480.8191, Baseline MSE = 3448.3214, Normalized = 0.7194<br>
+Mg: Model MSE = 1180.0748, Baseline MSE = 1448.3911, Normalized = 0.8147<br>
+pH: Model MSE = 0.0607, Baseline MSE = 0.0677, Normalized = 0.8967<br>
+
+Challenge normalized score (lower is better, on local test set): 0.8377<br>
+
+</p>
+<ul>
+    <li>changed lr for head -> reducer head ~10^4, head ~10^4, backbone ~10^-5, weight decay ~10^-4, batch 32</li>
+    <li>convnext_large_in22k, pretrained = true</li>
+    <li>1x1 conv with 3 filters</li>
+    <li>augmentations for training:
+        <ul>
+            <li> v2.RandomResizedCrop(size=self.size, scale=(0.8, 1.0))</li>li>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
 </ul>
   
