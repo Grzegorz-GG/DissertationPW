@@ -1500,4 +1500,29 @@ Challenge normalized score (lower is better, on local test set): 0.8678<br>
         </ul>
     </li>
 </ul>
+
+<h3>Experiment 54c:</h3>
+<p> PCA=3, regnety_160</p>
+
+P: Model MSE = 865.3087, Baseline MSE = 956.1005, Normalized = 0.9050<br>
+K: Model MSE = 2563.8843, Baseline MSE = 3448.3214, Normalized = 0.7435<br>
+Mg: Model MSE = 1203.9977, Baseline MSE = 1448.3911, Normalized = 0.8313<br>
+pH: Model MSE = 0.0603, Baseline MSE = 0.0677, Normalized = 0.8905<br>
+
+Challenge normalized score (lower is better, on local test set): 0.8426
+
+</p>
+<ul>
+    <li> head ~10^4, backbone ~10^-5, weight decay ~10^-4, batch 32</li>
+    <li>regnety_160, pretrained = true</li>
+    <li>PCA=3</li>
+    <li>augmentations for training:
+        <ul>
+            <li> v2.RandomResizedCrop(size=self.size, scale=(0.8, 1.0))</li>li>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
   
