@@ -1575,4 +1575,24 @@ Challenge score (lower is better): 0.8283<br>
         </ul>
     </li>
 </ul>
+
+<h3>Experiment 55:</h3>
+<p> PCA=3, regnety_160.sw_in12k_ft_in1k</p>
+
+Challenge score (lower is better, trained on entire dataset - val dataset): 0.808184134111883<br>
+
+</p>
+<ul>
+    <li> head ~10^4, backbone ~10^-5, weight decay ~10^-4, batch 32</li>
+    <li>regnety_160.sw_in12k_ft_in1k, pretrained = true</li>
+    <li>PCA=3</li>
+    <li>augmentations for training:
+        <ul>
+            <li> v2.RandomResizedCrop(size=self.size, scale=(0.8, 1.0))</li>li>
+            <li>v2.RandomHorizontalFlip(p=0.5)</li>
+            <li>v2.RandomVerticalFlip(p=0.5)</li>
+            <li>RandomSpectralDrop(drop_prob=0.05)</li>
+        </ul>
+    </li>
+</ul>
   
